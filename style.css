@@ -1,0 +1,129 @@
+@font-face {
+  font-family: mahe;
+  src: url(/Futura-Bold.woff2);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  color: rgb(255, 255, 255);
+  background-color: black;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.page1 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 0 1.5vw;
+  padding-top: 28vh;
+}
+.page1 h1 {
+  line-height: 14vw;
+  letter-spacing: -6px;
+  font-family: mahe;
+  font-weight: 300;
+  font-size: 15.6vw;
+  text-transform: uppercase;
+}
+.videocontainer {
+  height: 100vh;
+  width: 100%;
+}
+
+.videocontainer video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  position: relative;
+}
+
+.videocontainer .play {
+  padding: 2.5vw 2vw;
+  background-color: black;
+  color: white;
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-family: mahe;
+  position: fixed;
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0;
+}
+
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw 1.5vw;
+}
+#page2 #elem {
+  height: 100%;
+  width: 32%;
+  /* background-color: red; */
+  overflow: hidden;
+}
+#page2 #elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1;
+}
+
+@media (max-width: 600px) {
+  .page1 {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 1.6vw;
+    padding-top: 31vh;
+  }
+
+  .page1 h1 {
+    font-size: 16vw;
+    line-height: 13vw;
+    letter-spacing: -3px;
+  }
+
+  .videocontainer {
+    margin-top: 20px;
+    height: 30vh;
+    width: 100%;
+  }
+
+  .videocontainer .play {
+    position: absolute;
+    left: 51%;
+    top: 67%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    scale: 3;
+  }
+
+  #page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    padding: 2vw;
+  }
+
+  #page2 #elem {
+    height: 100vh;
+    width: 100%;
+    padding: 2vw;
+    overflow: hidden;
+  }
+  #page2 #elem img {
+    object-fit: cover;
+  }
+}
